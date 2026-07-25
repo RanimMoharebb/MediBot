@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/Medical-Chatbot/static/css/main.aa35142e.css",
+    "main.js": "/Medical-Chatbot/static/js/main.7b874adb.js",
+    "static/js/453.5ad331fc.chunk.js": "/Medical-Chatbot/static/js/453.5ad331fc.chunk.js",
+    "index.html": "/Medical-Chatbot/index.html",
+    "main.aa35142e.css.map": "/Medical-Chatbot/static/css/main.aa35142e.css.map",
+    "main.7b874adb.js.map": "/Medical-Chatbot/static/js/main.7b874adb.js.map",
+    "453.5ad331fc.chunk.js.map": "/Medical-Chatbot/static/js/453.5ad331fc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aa35142e.css",
+    "static/js/main.7b874adb.js"
+  ]
+}
