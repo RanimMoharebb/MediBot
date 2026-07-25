@@ -27,7 +27,11 @@ export default function LoginPage() {
       <div style={styles.card}>
         {/* Logo + Title */}
         <div style={styles.title}>  
-        <img src="/logo192.png" alt="logo" style={{ width: "40px", marginRight: "10px" }} />
+        <img
+          src={`${import.meta.env.BASE_URL}logo192.png`}
+          alt="logo"
+          style={{ width: "40px", marginRight: "10px" }}
+        />
           <h1 style={{ color: "#528BC8", fontSize: "1.9rem", fontWeight: "bold", margin: 0 }}>
             MediBot Assistant
           </h1>

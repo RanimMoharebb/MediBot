@@ -168,11 +168,11 @@ export default function ChatPage() {
             gap: "12px",
           }}
         >
-          <img
-            src="/logo192.png"
-            alt="logo"
-            style={{ width: "40px", marginRight: "10px" }}
-          />
+        <img
+          src={`${import.meta.env.BASE_URL}logo192.png`}
+          alt="logo"
+          style={{ width: "40px", marginRight: "10px" }}
+        />
           <h1
             style={{
               margin: 0,
