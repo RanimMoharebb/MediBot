@@ -12,28 +12,20 @@ import "../App.css";
 
 export default function ChatPage() {
   const [prompt, setPrompt] = useState("");
-  const [username, setUsername] = useState(
+  const [username] = useState(
     localStorage.getItem("username") || "Guest"
   );
   const [history, setHistory] = useState([]);
   const [loading, setLoading] = useState(false);
   const [showDisclaimer, setShowDisclaimer] = useState(true);
+
   const chatEndRef = useRef(null);
   const navigate = useNavigate();
-
-  useEffect(() => {
-    if (!localStorage.getItem("token")) {
-      navigate("/login");
-    } else {
-      fetchHistory();
-    }
-  }, [fetchHistory, navigate]);
 
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  // const fetchHistory = async () => {
   const fetchHistory = useCallback(async () => {
     try {
       const res = await axios.post(
@@ -46,6 +38,15 @@ export default function ChatPage() {
     }
   }, [username]);
 
+  useEffect(() => {
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+      return;
+    }
+
+    fetchHistory();
+  }, [navigate, fetchHistory]);
+
   const sendMessage = async () => {
     if (!prompt.trim()) return;
 
@@ -53,7 +54,7 @@ export default function ChatPage() {
     setHistory((prev) => [
       ...prev,
       {
-        prompt: prompt,
+        prompt,
         response: null,
         timestamp: new Date().toISOString(),
       },
@@ -94,6 +95,7 @@ export default function ChatPage() {
       });
     } catch (err) {
       console.error(err);
+
       setHistory((prev) => {
         const updated = [...prev];
         updated[updated.length - 1] = {
@@ -103,10 +105,10 @@ export default function ChatPage() {
         };
         return updated;
       });
+    } finally {
+      setLoading(false);
+      scrollToBottom();
     }
-
-    setLoading(false);
-    scrollToBottom();
   };
 
   const handleLogout = () => {
@@ -116,10 +118,14 @@ export default function ChatPage() {
 
   const clearChatHistory = async () => {
     try {
-      await axios.post("http://localhost:5000/api/clear_history", {
-        username,
-      });
-      setHistory([]); // Clear from frontend
+      await axios.post(
+        "http://localhost:5000/api/clear_history",
+        {
+          username,
+        }
+      );
+
+      setHistory([]);
     } catch (err) {
       console.error("Error clearing chat history:", err);
     }
