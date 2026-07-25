@@ -6,7 +6,7 @@ import ChatPage from "./pages/ChatPage";
 
 export default function App() {
   return (
-    <Router>
+    <Router basename={process.env.PUBLIC_URL}>
       <Routes>
         {/* Default landing page */}
         <Route path="/" element={<LoginPage />} />
