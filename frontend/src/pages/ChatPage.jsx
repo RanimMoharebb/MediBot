@@ -1,4 +1,11 @@
-import React, { useState, useEffect, useRef } from "react";
+//import React, { useState, useEffect, useRef } from "react";
+import React, {
+  useState,
+  useEffect,
+  useRef,
+  useCallback,
+} from "react";
+
 import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
@@ -15,15 +22,19 @@ export default function ChatPage() {
   const navigate = useNavigate();
 
   useEffect(() => {
-    if (!localStorage.getItem("token")) navigate("/login");
-    else fetchHistory();
-  }, []);
+    if (!localStorage.getItem("token")) {
+      navigate("/login");
+    } else {
+      fetchHistory();
+    }
+  }, [fetchHistory, navigate]);
 
   const scrollToBottom = () => {
     chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
   };
 
-  const fetchHistory = async () => {
+  // const fetchHistory = async () => {
+  const fetchHistory = useCallback(async () => {
     try {
       const res = await axios.post(
         "http://127.0.0.1:5000/api/history",
@@ -33,7 +44,7 @@ export default function ChatPage() {
     } catch (err) {
       console.error("History error:", err);
     }
-  };
+  }, [username]);
 
   const sendMessage = async () => {
     if (!prompt.trim()) return;
