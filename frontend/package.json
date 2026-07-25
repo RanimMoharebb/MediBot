@@ -2,7 +2,7 @@
   "name": "medical-chatbot-frontend",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ranimmoharebb.github.io/Medical-Chatbot",
+  "homepage": "https://ranimmoharebb.github.io/MediBot",
 
   "dependencies": {
     "@testing-library/dom": "^10.4.0",
