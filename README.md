@@ -185,8 +185,8 @@ Before running the project, ensure you have installed:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/RanimMoharebb/Medical-Chatbot.git
-cd Medical-Chatbot
+git clone https://github.com/RanimMoharebb/Medibot.git
+cd Medibot
 ```
 
 ---
