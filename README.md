@@ -191,11 +191,11 @@ cd Medibot
 
 ---
 
-### Install Backend Dependencies
+### Install Backend and AI Service Dependencies
 
 ```bash
 cd backend
-npm install
+pip install -r requirements.txt
 ```
 
 ---
@@ -207,16 +207,6 @@ cd frontend
 npm install
 ```
 
----
-
-### Install AI Service Dependencies
-
-```bash
-cd ai
-pip install -r requirements.txt
-```
-
----
 
 ## 🔧 Environment Variables
 
