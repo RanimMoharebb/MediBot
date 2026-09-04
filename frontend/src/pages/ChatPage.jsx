@@ -10,6 +10,8 @@ import axios from "axios";
 import { useNavigate } from "react-router-dom";
 import "../App.css";
 
+import logo from "../logo.svg";
+
 export default function ChatPage() {
   const [prompt, setPrompt] = useState("");
   const [username] = useState(
@@ -169,7 +171,7 @@ export default function ChatPage() {
           }}
         >
           <img
-            src="/logo192.png"
+            src={logo}
             alt="logo"
             style={{ width: "40px", marginRight: "10px" }}
           />

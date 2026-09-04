@@ -1,9 +1,14 @@
+import dns.resolver
+# Force this script to look up MongoDB via Google's DNS without touching your PC network settings
+dns.resolver.default_resolver = dns.resolver.Resolver(configure=False)
+dns.resolver.default_resolver.nameservers = ['8.8.8.8', '1.1.1.1']
+
 from pymongo import MongoClient
 from datetime import datetime
 from werkzeug.security import generate_password_hash, check_password_hash
 
 # ✅ MongoDB connection string (must be a string)
-MONGO_URI = "mongodb+srv://ahmedtammam458:JphqpRHTVV8RR5q9@cluster0.3cubnzr.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0"
+MONGO_URI = "mongodb+srv://ranimmohareb650_db_user:J6jav3mKU7SVDY1o@cluster0.gvt1vlu.mongodb.net/"
 
 # ✅ Connect to MongoDB
 client = MongoClient(MONGO_URI)

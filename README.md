@@ -186,7 +186,7 @@ Before running the project, ensure you have installed:
 
 ```bash
 git clone https://github.com/RanimMoharebb/Medical-Chatbot.git
-cd Medical-Chatbot
+cd MediBot
 ```
 
 ---
@@ -243,7 +243,7 @@ Start each service in the following order.
 ollama serve
 ```
 
-### 2. Start the AI Service
+### 2. Start the AI Service 
 
 ```bash
 cd ai
