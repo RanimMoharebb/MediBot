@@ -185,17 +185,17 @@ Before running the project, ensure you have installed:
 ### Clone the repository
 
 ```bash
-git clone https://github.com/RanimMoharebb/Medical-Chatbot.git
-cd MediBot
+git clone https://github.com/RanimMoharebb/Medibot.git
+cd Medibot
 ```
 
 ---
 
-### Install Backend Dependencies
+### Install Backend and AI Service Dependencies
 
 ```bash
 cd backend
-npm install
+pip install -r requirements.txt
 ```
 
 ---
@@ -207,16 +207,6 @@ cd frontend
 npm install
 ```
 
----
-
-### Install AI Service Dependencies
-
-```bash
-cd ai
-pip install -r requirements.txt
-```
-
----
 
 ## 🔧 Environment Variables
 
@@ -243,7 +233,7 @@ Start each service in the following order.
 ollama serve
 ```
 
-### 2. Start the AI Service 
+### 2. Start the AI Service
 
 ```bash
 cd ai
