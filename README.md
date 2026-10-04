@@ -16,33 +16,12 @@ An AI-powered medical chatbot that assists users in understanding their symptoms
 
 ## Tech Stack
 
-### Frontend
-
-- React.js
-- TypeScript
-- Vite
-- CSS
-
-### Backend
-
-- Node.js
-- Express.js
-- REST APIs
-
-## AI
-
-- Python
-- Ollama
-- Large Language Models (LLMs)
-- Prompt Engineering
-- Natural Language Processing (NLP)
-
-### Development Tools
-
-- Git
-- GitHub
-- npm
-- Postman
+| Category | Technologies |
+|---|---|
+| **Frontend** | React.js, TypeScript, Vite, CSS |
+| **Backend** | Node.js, Express.js, REST APIs |
+| **AI** | Python, Ollama, Large Language Models (LLMs), Prompt Engineering, Natural Language Processing (NLP) |
+| **Development Tools** | Git, GitHub, npm, Postman |
 
 ---
 
