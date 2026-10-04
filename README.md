@@ -8,7 +8,7 @@
 An AI-powered medical chatbot that assists users in understanding their symptoms through intelligent, context-aware conversations. The system collects relevant medical information using dynamic follow-up questions and generates informative responses using a locally hosted Large Language Model (LLM) powered by Ollama.
 
 <p>
-  <small>🎥 <a href="https://drive.google.com/file/d/1gs1l-h1RYLqk6CE7yO4eZkg2xspAUgy8/view?usp=sharing">Watch the MediBot Demo</a></small>
+  <small> <a href="https://drive.google.com/file/d/1gs1l-h1RYLqk6CE7yO4eZkg2xspAUgy8/view?usp=sharing">Watch the MediBot Demo</a></small>
 </p>
 
 ---
