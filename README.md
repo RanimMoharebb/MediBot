@@ -92,31 +92,6 @@ An AI-powered medical chatbot that assists users in understanding their symptoms
 
 ---
 
-## Core Functionalities
-
-### Intelligent Medical Conversations
-
-Collects symptoms through natural conversations and asks medically relevant follow-up questions before generating a response.
-
-### Context Management
-
-Maintains conversation history to produce coherent multi-turn interactions.
-
-### Prompt Engineering
-
-Constructs structured prompts to improve the quality, consistency, and relevance of AI-generated responses.
-
-### Intelligent Query Routing
-
-Determines whether additional medical information is required before generating a response.
-
-### Local AI Inference
-
-Runs the language model locally through Ollama, providing enhanced privacy and eliminating dependence on external AI APIs.
-
----
-
-
 ## Project Structure
 
 ```text
