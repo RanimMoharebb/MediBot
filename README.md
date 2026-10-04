@@ -41,6 +41,28 @@ An AI-powered medical chatbot that assists users in understanding their symptoms
 
 ---
 
+
+
+## Screenshots
+
+### Authentication
+
+![Login](Screenshots/Picture1.png)
+
+![Registration](Screenshots/Picture2.png)
+
+### MediBot Chatbot
+
+![MediBot](Screenshots/Picture4.png)
+
+![Chat History](Screenshots/Picture6.png)
+
+
+![Medical Chat](Screenshots/Picture7.png)
+
+
+---
+
 ## 🏗️ System Architecture
 
 ```text
